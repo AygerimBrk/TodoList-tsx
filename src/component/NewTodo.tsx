@@ -36,7 +36,7 @@ const NewTodo: React.FC<NewTodoProps> = ({
           size="small"
           label="new todo"
           value={value}
-          sx={{ width: "400px", marginRight: "20px" }}
+          sx={{ width: "400px", marginRight: "20px", borderColor: "black" }}
           onChange={(e) => updateText(e.target.value)}
         />
         <Button

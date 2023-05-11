@@ -52,7 +52,6 @@ const Todo: React.FC<TodoItemProps> = ({ id, title, completed }) => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-
         paddingLeft: " 10%",
       }}
     >
@@ -65,7 +64,7 @@ const Todo: React.FC<TodoItemProps> = ({ id, title, completed }) => {
         <span className="title">{title}</span>
       </div>
       <div>
-        <span onClick={() => setOpen(true)}>
+        <span style={{ color: "white" }} onClick={() => setOpen(true)}>
           <ModeEditIcon />
         </span>
         <span className="delete" onClick={() => dispatch(removeTodo(id))}>

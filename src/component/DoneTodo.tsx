@@ -60,7 +60,7 @@ const DoneTodo: React.FC<TodoItemProps> = ({ id, title, completed }) => {
         <span style={{ color: "white" }}>{title}</span>
       </div>
       <div>
-        <span onClick={() => setOpen(true)}>
+        <span style={{ color: "white" }} onClick={() => setOpen(true)}>
           <ModeEditIcon />
         </span>
         <span className="delete" onClick={() => dispatch(removeTodo(id))}>
