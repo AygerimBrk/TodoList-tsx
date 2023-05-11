@@ -16,7 +16,6 @@ const TodoList: React.FC = () => {
   const dispatch = useDispatch();
   //   const todoList = useSelector(selectTodoList);
   const dispatchThunk = useDispatch<ThunkDispatch<any, any, AnyAction>>();
-
   useEffect(() => {
     dispatchThunk(fetchTodo())
       .then((result) => {
@@ -47,9 +46,7 @@ const TodoList: React.FC = () => {
           marginRight: "10px",
         }}
       >
-        <h2 style={{ color: "white" }}>
-          Doing : {todos.filter((todo: Todo) => todo.completed == false).length}
-        </h2>
+        <h2 style={{ color: "white" }}>Doing : </h2>
 
         {todos.map((todo: Todo) => {
           if (!todo.completed) {
@@ -71,9 +68,7 @@ const TodoList: React.FC = () => {
           marginLeft: "10px",
         }}
       >
-        <h2 style={{ color: "white" }}>
-          Done : {todos.filter((todo: Todo) => todo.completed == true).length}
-        </h2>
+        <h2 style={{ color: "white" }}>Done : </h2>
 
         {todos.map((todo: Todo) => {
           if (todo.completed) {
